@@ -1,0 +1,11 @@
+:root { --bg:#0b0c10; --fg:#eaf0f1; --muted:#9fb3c8; --accent:#00d1b2; }
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; height:100%; background:var(--bg); color:var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell; }
+main { max-width: 840px; margin: 40px auto; padding: 24px; background:#13151a; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+h1 { margin-top:0; font-size: 28px; }
+.controls { display:flex; gap:12px; margin: 10px 0 20px; }
+button { padding:10px 14px; border:0; border-radius:12px; background:var(--accent); color:#031; font-weight:700; cursor:pointer; }
+button[disabled]{ opacity:.5; cursor:not-allowed; }
+.transcripts { margin-top: 20px; }
+#transcript { white-space: pre-wrap; color: var(--muted); background: #0f1117; padding: 12px; border-radius: 12px; min-height: 100px; }
+.meters { display:flex; gap:20px; color:var(--muted); }
