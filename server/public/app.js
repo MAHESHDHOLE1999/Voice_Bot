@@ -60,7 +60,7 @@ connectBtn.onclick = async () => {
   await ensureAudio();
   if (ws && ws.readyState === WebSocket.OPEN) return;
   // ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws`);
-  ws = new WebSocket(`https://voice-bot-lake.vercel.app/`);
+  ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://voice-bot-lake.vercel.app/ws`);
   ws.binaryType = 'arraybuffer';
   ws.onopen = () => { setStatus('connected'); micBtn.disabled = false; lastTurnAt = performance.now(); };
   ws.onmessage = (ev) => {
