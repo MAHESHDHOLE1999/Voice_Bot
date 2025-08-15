@@ -61,7 +61,7 @@ connectBtn.onclick = async () => {
   if (ws && ws.readyState === WebSocket.OPEN) return;
   // ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws`);
   // ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://voice-bot-eeqe.onrender.com/ws`);
-  ws = new WebSocket('https://voice-bot-eeqe.onrender.com');
+  ws = new WebSocket('wss://voice-bot-eeqe.onrender.com/ws');
   ws.binaryType = 'arraybuffer';
   ws.onopen = () => { setStatus('connected'); micBtn.disabled = false; lastTurnAt = performance.now(); };
   ws.onmessage = (ev) => {
